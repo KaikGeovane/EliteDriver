@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define charset para evitar erros de acentuação -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsividade em dispositivos móveis -->
+    <title>EliteDrivers</title> <!-- Título da aba do navegador -->
+
+    <!-- Arquivo CSS principal do site -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Cabeçalho / Menu Superior -->
+    <header>
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="" class="logo">EliteDrivers <span>.</span></a>
+
+            <!-- Menu principal -->
+            <div class="navbar">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="team.html" class="nav-link">Team</a>
+
+                <!-- Dropdown de carros -->
+                <div class="nav-link dropdown-btn">Cars ▾</div>
+                <ul class="dropdown-menu" id="cars-menu">
+                    <li><a href="Luxo.html">Carros de Luxo</a></li>
+                    <li><a href="Esportivos.html">Carros Esportivos</a></li>
+                </ul>
+            </div>
+
+            <!-- Ícones do menu (pesquisa, login, menu mobile) -->
+            <div class="nav-icons">
+                <a href=""><i class='bx bx-search'></i></a>
+
+                <!-- Ícone de usuário com link para login -->
+                <a href="http://127.0.0.1:3002/login.html?serverWindowId=e60df590-b5b5-4999-9b18-64db7d8968d0">
+                    <i class='bx bx-user user-icon'></i>
+                </a>
+
+                <!-- Ícone do menu mobile (3 linhas) -->
+                <div class="menu-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção inicial/Home -->
+    <section class="home" id="home">
+        <div class="home-content container">
+
+            <!-- Imagem principal da home -->
+            <div class="home-img">
+                <img src="./img/home.png" alt="" />
+            </div>
+
+            <!-- Formulário de busca de carros -->
+            <form action="" class="input-form">
+                <div class="input-box input-border">
+                    <span>Localização</span>
+                    <input type="search" placeholder="Search Places">
+                </div>
+
+                <div class="input-box input-border">
+                    <span>Início</span>
+                    <input type="date" id="start-date">
+                </div>
+
+                <div class="input-box">
+                    <span>Retorno</span>
+                    <input type="date" id="return-date">
+                </div>
+
+                <!-- Botão de pesquisa -->
+                <i class="bx bx-search search-btn"></i>
+            </form>
+        </div>
+    </section>
+
+    <!-- Seção: Carros em alta -->
+    <section class="trending container" id="trending">
+        <div class="heading">
+            <h2>Veículos em alta</h2>
+        </div>
+
+        <div class="launches-content">
+            <!-- Cada box representa um carro em alta -->
+            <a href="nissan.html" class="launch-box">
+                <h4>Gasolina</h4>
+                <img src="./img/skiline.png" alt="">
+                <h3>Nissan Skyline</h3>
+                <p>R$2.000 a R$3.000/dia</p>
+            </a>
+
+            <a href="corvette.html" class="launch-box">
+                <h4>Gasolina</h4>
+                <img src="img/corvette.png" alt="">
+                <h3>Chevrolet Corvette</h3>
+                <p>R$2.500 a R$3.500/dia</p>
+            </a>
+
+            <a href="supra.html" class="launch-box">
+                <h4>Gasolina</h4>
+                <img src="./img/toyota.png" alt="">
+                <h3>Toyota Supra MK4</h3>
+                <p>R$1.800 a R$2.500/dia</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção de carros de luxo para aluguel -->
+    <section class="rentals container" id="rentals">
+        <div class="heading">
+            <h2>Carros Esportivo</h2>
+            <p>Carros esportivos oferecem alta performance, design agressivo e dirigibilidade superior. São ideais para
+                quem busca potência, exclusividade e uma experiência de condução mais emocionante.
+            </p>
+        </div>
+
+        <div class="rentals-content">
+            <!-- Cada rental-box representa um carro disponível para aluguel -->
+            <!-- (O mesmo padrão se repete, então deixo o comentário apenas no primeiro bloco) -->
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Coupé</h3>
+                     <!-- ícone de favorito -->
+                </div>
+                <img src="./img/porche9-removebg-preview.png" alt="" />
+                <h2>Porsche 718 Boxster</h2>
+                <h4>Manual</h4>
+                <div class="price-btn">
+                    <p>R$2.000<span>/dia</span></p>
+                    <a href="car.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Coupé</h3>
+                    
+                </div>
+                <img src="./img/audi.png" alt="" />
+                <h2>Audi R8</h2>
+                <h4>Manual</h4>
+                <div class="price-btn">
+                    <p>R$4.500<span>/dia</span></p>
+                    <a href="audi.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Coupé</h3>
+                    
+                </div>
+                <img src="./img/toyota.png" alt="" />
+                <h2>Supra MK4</h2>
+                <h4>Manual</h4>
+                <div class="price-btn">
+                    <p>R$1.800<span>/dia</span></p>
+                    <a href="supra.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Coupé</h3>
+                    
+                </div>
+                <img src="./img/corvette.png" alt="" />
+                <h2>Chevrolet Corvette</h2>
+                <h4>Manual</h4>
+                <div class="price-btn">
+                    <p>R$2.500<span>/dia</span></p>
+                    <a href="corvette.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Coupé</h3>
+                    
+                </div>
+                <img src="./img/gtr.png" alt="" />
+                <h2>Nissan GT-R</h2>
+                <h4>Manual</h4>
+                <div class="price-btn">
+                    <p>R$3.000<span>/dia</span></p>
+                    <a href="gtr.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Coupé</h3>
+                    
+                </div>
+                <img src="./img/pegani.png" alt="" />
+                <h2>Pagani Zonda R</h2>
+                <h4>Manual</h4>
+                <div class="price-btn">
+                    <p>R$15.000<span>/dia</span></p>
+                    <a href="pegani.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Coupé</h3>
+                    
+                </div>
+                <img src="./img/skiline.png" alt="" />
+                <h2>Nissan Skyline</h2>
+                <h4>Manual</h4>
+                <div class="price-btn">
+                    <p>R$2.000<span>/dia</span></p>
+                    <a href="nissan.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Coupé</h3>
+                    
+                </div>
+                <img src="./img/mclaren.png" alt="" />
+                <h2>MC Laren 720S</h2>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$30.000 a R$80.000<span>/dia</span></p>
+                    <a href="laren.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Sedan</h3>
+                    
+                </div>
+                <img src="./img/honda.png" alt="" />
+                <h2>Honda Civic Type R</h2>
+                <h4>Manual</h4>
+                <div class="price-btn">
+                    <p>R$2.500 a R$3.000<span>/dia</span></p>
+                    <a href="honda.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Coupé</h3>
+                    
+                </div>
+                <img src="./img/subaru.png" alt="" />
+                <h2>Mazda RX-7</h2>
+                <h4>Manual</h4>
+                <div class="price-btn">
+                    <p>R$2.400 a R$3.000<span>/dia</span></p>
+                    <a href="mazda.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Coupé</h3>
+                    
+                </div>
+                <img src="./img/lexus.png" alt="" />
+                <h2>Lexus LFA</h2>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$10.000 a R$15.000<span>/dia</span></p>
+                    <a href="lexus.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Sedan</h3>
+                    
+                </div>
+                <img src="./img/Subaru Impreza WRX ST.png" alt="" />
+                <h2>Subaru Impreza</h2>
+                <h4>Automatic</h4>
+                <div class="price-btn">
+                    <p>R$2.500 a R$3.000<span>/dia</span></p>
+                    <a href="subaru.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Reviews / Depoimentos -->
+
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <div class="footer-content container">
+
+            <!-- Informações gerais -->
+            <div class="footer-box">
+                <a href="#" class="logo">EliteDrivers<span>.</span></a>
+                <p>Bairro da Glória, Cenad</p>
+
+                <!-- Redes sociais -->
+                <div class="social">
+                    <a href="#"><i class="bx bxl-instagram"></i></a>
+                     <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+            </div>
+
+            <!-- Horário de funcionamento -->
+
+
+            <!-- Contato -->
+            <div class="footer-box">
+                <h3>Contato</h3>
+                <p>(31)99227-9677</p>
+                <p>support@gmail.com <br />support@gmail.com</p>
+                <p>Brasil</p>
+            </div>
+        </div>
+
+        <!-- Direitos autorais -->
+        <p class="copyright">&#169; 2025</p>
+    </div>
+
+    <!-- Biblioteca ScrollReveal para animações -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Arquivo JS principal -->
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,351 +1,249 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EliteDrivers</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <head>
+        <meta charset="UTF-8"> <!-- Define charset para evitar erros de acentuação -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"> <!-- Responsividade em dispositivos móveis -->
+        <title>EliteDrivers</title> <!-- Título da aba do navegador -->
+        <!-- Arquivo CSS principal do site -->
+        <!-- Ícones Boxicons -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <!-- Cabeçalho / Menu Superior -->
+        <header>
+            <div class="nav container">
+                <!-- Logo -->
+                <a href="" class="logo">EliteDrivers <span>.</span></a>
 
-</head>
+                <!-- Menu principal -->
+                <div class="navbar">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#trending" class="nav-link">Trending</a>
 
-<body>
-    <header>
-        <div class="nav container">
-            <a href="" class="logo">EliteDrivers <span>.</span></a>
-            <div class="navbar">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#trending" class="nav-link">Trending</a>
-                <a href="#rentals" class="nav-link">Cars</a>
-                <a href="#team" class="nav-link">Team</a>
-                <a href="#reviews" class="nav-link">Reviews</a>
-            </div>
-            <div class="nav-icons">
-                <a href=""><i class='bx bx-search'></i></a>
-                <a href=""><i class='bx bx-user user-icon'></i></i></a>
-                <div class="menu-icon">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section class="home" id="home">
-        <div class="home-content container">
-            <div class="home-img">
-                <img src="./img/home.png" alt="" />
-            </div>
-            <form action="" class="input-form">
-                <div class="input-box input-border">
-                    <span>Localização</span>
-                    <input type="search" name="" id="" placeholder="Search Places">
-                </div>
-                <div class="input-box input-border">
-                    <span>Início</span>
-                    <input type="date" name="start-date" id="start-date">
-                </div>
-                <div class="input-box">
-                    <span>Retorno</span>
-                    <input type="date" name="return-date" id="return-date">
-                </div>
-                <i class="bx bx-search search-btn"></i>
-            </form>
-        </div>
-    </section>
+                    <!-- Dropdown de carros -->
+                    <div class="nav-link dropdown-btn">Cars ▾</div>
+                    <ul class="dropdown-menu" id="cars-menu">
+                        <li><a href="Luxo.html">Carros de Luxo</a></li>
+                        <li><a href="Esportivos.html">Carros Esportivos</a></li>
+                    </ul>
 
-    <section class="trending container" id="trending">
-        <div class="heading">
-            <h2>Veículos em alta</h2>
-        </div>
-        <div class="trending-content">
-            <div class="trend-box">
-                <h4>Eletric</h4>
-                <img src="./img/trend-1.png" alt="">
-                <h3>Taycan S</h3>
-                <p>From $299/day</p>
-            </div>
-            <div class="trend-box">
-                <h4>Eletric</h4>
-                <img src="./img/trend-2.png" alt="">
-                <h3>Taycan </h3>
-                <p>From $299/day</p>
-            </div>
-            <div class="trend-box">
-                <h4>Eletric</h4>
-                <img src="./img/trend-3.png" alt="">
-                <h3>Taycan Turbo</h3>
-                <p>From $299/day</p>
-            </div>
-            <div class="trend-box">
-                <h4>Eletric</h4>
-                <img src="./img/trend-4.png" alt="">
-                <h3>Taycan Turismo</h3>
-                <p>From $299/day</p>
-            </div>
-        </div>
-    </section>
-    <section class="rentals container" id="rentals">
+                    <a href="team.html" class="nav-link">Team</a>
+                    
+                </div>
 
-        <div class="heading">
-            <h2>Our Top Rentals</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, eos omnis? Vero, porro pariatur! Neque
-                dicta dolorem expedita ullam ea.</p>
-        </div>
-        <div class="rentals-content">
-            <div class="rental-box">
-                <div class="rental-top">
-                    <h3>Sedan</h3>
-                    <i class="bx bxs-heart"></i>
-                </div>
-                <img src="./img/rental-1.png" alt="" />
-                <h2>Rolls-Royce</h2>
-                <h4>Automatic</h4>
-                <div class="price-btn">
-                    <p>$299<span>/day</span></p>
-                    <a href="#" class="rental-btn">Rent</a>
-                </div>
-            </div>
-            <div class="rental-box">
-                <div class="rental-top">
-                    <h3>Sedan</h3>
-                    <i class="bx bxs-heart"></i>
-                </div>
-                <img src="./img/rental-2.png" alt="" />
-                <h2>Rolls-Royce</h2>
-                <h4>Automatic</h4>
-                <div class="price-btn">
-                    <p>$299<span>/day</span></p>
-                    <a href="#" class="rental-btn">Rent</a>
-                </div>
-            </div>
-            <div class="rental-box">
-                <div class="rental-top">
-                    <h3>Sedan</h3>
-                    <i class="bx bxs-heart"></i>
-                </div>
-                <img src="./img/rental-3.png" alt="" />
-                <h2>Rolls-Royce</h2>
-                <h4>Automatic</h4>
-                <div class="price-btn">
-                    <p>$299<span>/day</span></p>
-                    <a href="#" class="rental-btn">Rent</a>
-                </div>
-            </div>
-            <div class="rental-box">
-                <div class="rental-top">
-                    <h3>Sedan</h3>
-                    <i class="bx bxs-heart"></i>
-                </div>
-                <img src="./img/rental-4.png" alt="" />
-                <h2>Rolls-Royce</h2>
-                <h4>Automatic</h4>
-                <div class="price-btn">
-                    <p>$299<span>/day</span></p>
-                    <a href="#" class="rental-btn">Rent</a>
-                </div>
-            </div>
-            <div class="rental-box">
-                <div class="rental-top">
-                    <h3>Sedan</h3>
-                    <i class="bx bxs-heart"></i>
-                </div>
-                <img src="./img/rental-5.png" alt="" />
-                <h2>Rolls-Royce</h2>
-                <h4>Automatic</h4>
-                <div class="price-btn">
-                    <p>$299<span>/day</span></p>
-                    <a href="#" class="rental-btn">Rent</a>
-                </div>
-            </div>
-            <div class="rental-box">
-                <div class="rental-top">
-                    <h3>Sedan</h3>
-                    <i class="bx bxs-heart"></i>
-                </div>
-                <img src="./img/rental-6.png" alt="" />
-                <h2>Rolls-Royce</h2>
-                <h4>Automatic</h4>
-                <div class="price-btn">
-                    <p>$299<span>/day</span></p>
-                    <a href="#" class="rental-btn">Rent</a>
-                </div>
-            </div>
-            <div class="rental-box">
-                <div class="rental-top">
-                    <h3>Sedan</h3>
-                    <i class="bx bxs-heart"></i>
-                </div>
-                <img src="./img/rental-7.png" alt="" />
-                <h2>Rolls-Royce</h2>
-                <h4>Automatic</h4>
-                <div class="price-btn">
-                    <p>$299<span>/day</span></p>
-                    <a href="#" class="rental-btn">Rent</a>
-                </div>
-            </div>
-            <div class="rental-box">
-                <div class="rental-top">
-                    <h3>Sedan</h3>
-                    <i class="bx bxs-heart"></i>
-                </div>
-                <img src="./img/rental-8.png" alt="" />
-                <h2>Rolls-Royce</h2>
-                <h4>Automatic</h4>
-                <div class="price-btn">
-                    <p>$299<span>/day</span></p>
-                    <a href="#" class="rental-btn">Rent</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="team container" id="team">
-        <div class="heading">
-            <h2>Meet Our Exoerts</h2>
-        </div>
-        <div class="team-content">
-            <div class="team-box">
-                <img src="./img/team-1.png" alt="">
-                <h2>Brad Zones</h2>
-                <span>Co-Head</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="team-box">
-                <img src="./img/team-2.png" alt="">
-                <h2>Brad Zones</h2>
-                <span>Co-Head</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="team-box">
-                <img src="./img/team-3.png" alt="">
-                <h2>Brad Zones</h2>
-                <span>Co-Head</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="team-box">
-                <img src="./img/team-1.png" alt="">
-                <h2>Brad Zones</h2>
-                <span>Co-Head</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-        </div>
-    </section>
-    <section class="reviews" id="reviews">
-        <div class="heading">
-            <h2>Our Customer's</h2>
-        </div>
-        <div class="reviews-content container">
-            <div class="t-box">
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <div class="profile">
-                    <img src="./img/profile-1.png" alt="">
-                    <div class="profile-data">
-                        <h3>Alfredo Bator</h3>
-                        <span>New York</span>
+                <!-- Ícones do menu (pesquisa, login, menu mobile) -->
+                <div class="nav-icons">
+                    <a href=""><i class='bx bx-search'></i></a>
+
+                    <!-- Ícone de usuário com link para login -->
+                    <a href="http://127.0.0.1:3002/login.html?serverWindowId=e60df590-b5b5-4999-9b18-64db7d8968d0">
+                        <i class='bx bx-user user-icon'></i>
+                    </a>
+
+                    <!-- Ícone do menu mobile (3 linhas) -->
+                    <div class="menu-icon">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
                     </div>
                 </div>
             </div>
-            <div class="t-box">
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
+        </header>
+
+        <!-- Seção inicial/Home -->
+        <section class="home" id="home">
+            <div class="home-content container">
+
+                <!-- Imagem principal da home -->
+                <div class="home-img">
+                    <img src="./img/home.png" alt="" />
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <div class="profile">
-                    <img src="./img/profile-2.png" alt="">
-                    <div class="profile-data">
-                        <h3>Alfredo Bator</h3>
-                        <span>New York</span>
-                    </div>
-                </div>
+
+              
             </div>
-            <div class="t-box">
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <div class="profile">
-                    <img src="./img/profile-3.png" alt="">
-                    <div class="profile-data">
-                        <h3>Alfredo Bator</h3>
-                        <span>New York</span>
-                    </div>
-                </div>
+        </section>
+
+        <!-- Seção: Carros em alta -->
+      <section class="launches container" id="launches">
+    <div class="launch-heading">
+        <h2>Novos Lançamentos!!!</h2>
+    </div>
+
+   <div class="launches-content">
+    <a href="nissan.html" class="launch-box">
+        <h4>Gasolina</h4>
+        <img src="./img/skiline.png" alt="">
+        <h3>Nissan Skyline</h3>
+    </a>
+
+    <a href="corvette.html" class="launch-box">
+        <h4>Gasolina</h4>
+        <img src="img/corvette.png" alt="">
+        <h3>Chevrolet Corvette</h3>
+    </a>
+
+    <a href="supra.html" class="launch-box">
+        <h4>Gasolina</h4>
+        <img src="./img/toyota.png" alt="">
+        <h3>Toyota Supra MK4</h3>
+    </a>
+
+    <a href="ford.html" class="launch-box">
+        <h4>Gasolina</h4>
+        <img src="./img/msutang.png" alt="">
+        <h3>Ford Mustang</h3>
+    </a>
+
+    <a href="gtr.html" class="launch-box">
+        <h4>Gasolina</h4>
+        <img src="./img/gtr.png" alt="">
+        <h3>Nissan GT-R</h3>
+    </a>
+
+    <a href="pegani.html" class="launch-box">
+        <h4>Gasolina</h4>
+        <img src="./img/pegani.png" alt="">
+        <h3>Pagani Zonda R</h3>
+    </a>
+</div>
+
+</section>
+
+
+
+
+        
+      </div>
+      
+     
+
+        
+
+        <!-- Seção de Reviews / Depoimentos -->
+      <section class="reviews" id="reviews">
+    <div class="heading">
+        <h2>Avaliações dos nossos clientes</h2>
+    </div>
+
+    <div class="reviews-content container">
+        <!-- Depoimento 1 -->
+        <div class="t-box">
+            <div class="stars">
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
             </div>
-            <div class="t-box">
-                <div class="stars">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <div class="profile">
-                    <img src="./img/profile-4.png" alt="">
-                    <div class="profile-data">
-                        <h3>Alfredo Bator</h3>
-                        <span>New York</span>
-                    </div>
+
+            <p>A loja é incrível! Os carros são de tirar o fôlego, atendimento impecável.</p>
+
+            <div class="profile">
+                <img src="./img/mariana.avif" alt="">
+                <div class="profile-data">
+                    <h3>Mariana Silva</h3>
+                    <span>São Paulo</span>
                 </div>
             </div>
         </div>
-    </section>
-   <div class="footer">
-    <div class="footer-content container">
-        <div class="footer-box">
-            <a href="#" class="logo">EliteDrivers<span>.</span></a>
-            <p>Bairro da Glória, Cenad</p>
-            <div class="social">
-                <a href="#"><i class="bx bxl-instagram" ></i></a>
-                <a href="#"><i class="bx bxl-linkedin" ></i></a>
-                <a href="#"><i class="bx bxl-tiktok" ></i></a>
-                <a href="#"><i class="bx bxl-pinterest-alt" ></i></a>
+
+        <!-- Depoimento 2 -->
+        <div class="t-box">
+            <div class="stars">
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+
+            <p>Simplesmente sensacional! Cada carro é uma obra de arte. Vale muito a pena conhecer a loja.</p>
+
+            <div class="profile">
+                <img src="./img/jorge.jpg" alt="">
+                <div class="profile-data">
+                    <h3>Lucas Andrade</h3>
+                    <span>Rio de Janeiro</span>
+                </div>
             </div>
         </div>
-        <div class="footer-box">
-            <h3>Opening Hours</h3>
-            <p><span>Seg</span>07:00 - 20:30</p>
-            <p><span>Ter</span>07:00 - 20:30</p>
-            <p><span>Qua</span>07:00 - 20:30</p>
-            <p><span>Qui</span>07:00 - 20:30</p>
-            <p><span>Sex</span>07:00 - 20:30</p>
-            <p><span>Sab</span>07:00 - 18:30</p>
-            <p><span>Dom</span>Closed</p>
+
+          <div class="t-box">
+            <div class="stars">
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+
+            <p>Os lançamentos estão incríveis! Cada novo carro supera o outro, uma experiência única.</p>
+
+            <div class="profile">
+                <img src="./img/jorge2.jpg" alt="">
+                <div class="profile-data">
+                    <h3>Fernando Costa</h3>
+                    <span>Curitiba</span>
+                </div>
+            </div>
         </div>
-        <div class="footer-box">
-            <h3>Informação</h3>
-            <a href="">Sobre nós</a>
-            <a href="">Blog</a>
-            <a href="">Cars</a>
-            <a href="">Trending</a>
-            <a href="">Reviews</a>    
-        </div>
-        <div class="footer-box">
-            <h3>Contato</h3>
-            <p>(31)99227-9677</p>
-            <p>support@gmail.com <br />support@gmail.com</p>
-            <p>Brasil</p>
+       
+
+        <!-- Depoimento 3 -->
+        <div class="t-box">
+            <div class="stars">
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+
+            <p>Não consigo parar de admirar os lançamentos! Cada carro novo da loja é uma obra de engenharia e design.</p>
+
+            <div class="profile">
+                <img src="./img/jorge3.jpg" alt="">
+                <div class="profile-data">
+                    <h3>Gustavo Lima</h3>
+                    <span>Recife</span>
+                </div>
+            </div>
         </div>
     </div>
-    <p class="copyright">&#169; 2025</p>
-   </div>
-<script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
-</body>
-</html>
+    </div>
+</section>
+
+        <!-- Rodapé -->
+        <div class="footer">
+            <div class="footer-content container">
+
+                <!-- Informações gerais -->
+                <div class="footer-box">
+                    <a href="#" class="logo">EliteDrivers<span>.</span></a>
+                    <p>Bairro da Glória, Cenad</p>
+
+                    <!-- Redes sociais -->
+                    <div class="social">
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                        <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                       
+                        
+                    </div>
+                </div>
+
+                <!-- Horário de funcionamento -->
+               
+                <!-- Links das Páginas -->
+                
+
+                <!-- Contato -->
+                <div class="footer-box">
+                    <h3>Contato</h3>
+                    <p>(31)99227-9677</p>
+                    <p>support@gmail.com <br />support@gmail.com</p>
+                    <p>Brasil</p>
+                </div>
+            </div>
+
+            <!-- Direitos autorais -->
+            <p class="copyright">&#169; 2025</p>
+        </div>
+
+        <!-- Biblioteca ScrollReveal para animações -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!-- Arquivo JS principal -->
+        <script src="main.js"></script>
+    </body>
+
+    </html>
