@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define charset para evitar erros de acentuação -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsividade em dispositivos móveis -->
+    <title>EliteDrivers</title> <!-- Título da aba do navegador -->
+
+    <!-- Arquivo CSS principal do site -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Cabeçalho / Menu Superior -->
+    <header>
+        <div class="nav container">
+            <!-- Logo -->
+            <a href="" class="logo">EliteDriver <span>.</span></a>
+
+            <!-- Menu principal -->
+            <div class="navbar">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="#trending" class="nav-link">Tendências</a>
+
+                <!-- Dropdown de carros -->
+                <div class="nav-link dropdown-btn">Carros ▾</div>
+                <ul class="dropdown-menu" id="cars-menu">
+                    <li><a href="Luxo.html">Carros de Luxo</a></li>
+                    <li><a href="Esportivos.html">Carros Esportivos</a></li>
+                </ul>
+            </div>
+
+            <!-- Ícones do menu (pesquisa, login, menu mobile) -->
+            <div class="nav-icons">
+                <a href=""><i class='bx bx-search'></i></a>
+
+                <!-- Ícone de usuário com link para login -->
+                <a href="http://127.0.0.1:3002/login.html?serverWindowId=e60df590-b5b5-4999-9b18-64db7d8968d0">
+                    <i class='bx bx-user user-icon'></i>
+                </a>
+
+                <!-- Ícone do menu mobile (3 linhas) -->
+                <div class="menu-icon">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção inicial/Home -->
+    <section class="home" id="home">
+        <div class="home-content container">
+
+            <!-- Imagem principal da home -->
+            <div class="home-img">
+                <img src="img/Carros/home.png" alt="Car Home" />
+            </div>
+
+            <!-- Formulário de busca de carros -->
+            
+        </div>
+    </section>
+
+    <!-- Seção: Carros em alta -->
+    <section class="trending container" id="trending">
+        <div class="heading">
+            <h2>Veículos em alta</h2>
+        </div>
+
+        <div class="trending-content">
+            <!-- Cada box representa um carro em alta -->
+            <div class="trend-box">
+                <h4>Gasolina</h4>
+
+                <a href="Carro Luxo/Bentley Continental GT 2018.html">
+                    <img src="img/Carros/bentley continental gt 2018.png" alt="Bentley Continental GT">
+                </a>
+
+                <h3>Bentley Continental GT</h3>
+                <p>R$ 1.000 a R$ 3.000</p>
+            </div>
+
+
+            <div class="trend-box">
+                <h4>Gasolina</h4>
+
+                <a href="Carro Luxo/Porsche Panamera Turbo S Sport 2021.html">
+                    <img src="img/Carros/Porsche Panamera Turbo S Sport 2021.png" alt="Porsche Panamera Turbo S Sport">
+                </a>
+
+                <h3>Porsche Panamera Turbo S Sport</h3>
+                <p>R$ 1.000 a R$ 3.000</p>
+            </div>
+
+            <div class="trend-box">
+                <h4>Gasolina</h4>
+
+                <a href="Carro Luxo/Maserati Quattroporte GTS.html">
+                    <img src="img/Carros/Maserati Quattroporte GTS.png" alt="Maserati Quattroporte GTS">
+                </a>
+
+                <h3>Maserati Quattroporte GTS</h3>
+                <p>R$ 1.000 a R$ 3.000</p>
+            </div>
+
+            <div class="trend-box">
+                <h4>Gasolina</h4>
+
+                <a href="Carro Luxo/Maserati Levante GTS.html">
+                    <img src="img/Carros/Maserati Levante.png" alt="Maserati Levante">
+                </a>
+
+                <h3>Maserati Levante</h3>
+                <p>R$ 1.000 a R$ 3.000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de carros de luxo para aluguel -->
+    <section class="rentals container" id="rentals">
+        <div class="heading">
+            <h2>Carros de Luxo</h2>
+            <p>Descrição sobre a linha de carros de luxo da empresa.</p>
+        </div>
+
+        <div class="rentals-content">
+            <!-- Cada rental-box representa um carro disponível para aluguel -->
+
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>SUV</h3>
+                    <i class=""></i> <!-- ícone de favorito -->
+                </div>
+                <a href="Carro Luxo/Porsche Caynne Turbo GT.html">
+                    <img src="img/Carros/Porsche Cayenne Turbo GT.png" alt="Bentley_Continental_GT" />
+                </a>
+                <h2>Porsche Cayenne Turbo GT</h2>
+                <h4>Gasolina</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$4.500<span>/dia</span></p>
+                    <a href="Carro Luxo/Porsche Cayenne Turbo GT.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Sedan</h3>
+                    <i class=""></i>
+                </div>
+                <img src="./img/Carros/Genesis G90 2020.png" alt="Genesis G90 2020" />
+                <h2>Genesis G90</h2>
+                <h4>Gasolina</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$2.500<span>/dia</span></p>
+                    <a href="Carro Luxo/Genesis G90 2020.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>SUV</h3>
+                    <i class=""></i>
+                </div>
+                <img src="./img/Carros/Infiniti QX80 2022.png" alt="Infiniti QX80 2022" />
+                <h2>Infiniti QX80</h2>
+                <h4>Gasolina</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$1.200<span>/dia</span></p>
+                    <a href="Carro Luxo/Infiniti QX80 2022.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>SUV</h3>
+                    <i class=""></i>
+                </div>
+                <img src="./img/Carros/Porsche Panamera Turbo S Sport 2021.png"
+                    alt="Porsche Panamera Turbo S Sport 2021" />
+                <h2>Porsche Panamera Turbo S Sport</h2>
+                <h4>Gasolina</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$6.000<span>/dia</span></p>
+                    <a href="Carro Luxo/Porsche Panamera Turbo S Sport 2021.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+
+
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Sedan</h3>
+                    <i class=""></i>
+                </div>
+                <img src="./img/Carros/Porsche 911 Carrera GTS.png" alt="Porsche 911 Carrera GTS" />
+                <h2>Porsche 911 Carrera GTS</h2>
+                <h4>Gasolina</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$8.000<span>/dia</span></p>
+                    <a href="Carro Luxo/Porsche 911 Carrera GTS.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+
+
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Sedan</h3>
+                    <i class=""></i>
+                </div>
+                <img src="./img/Carros/bentley continental gt 2018.png" alt="Bentley Continental GT" />
+                <h2>Bentley Continental GT</h2>
+                <h4>Gasolina</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$4.500<span>/dia</span></p>
+                    <a href="Carro Luxo/Bentley Continental GT 2018.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+
+
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Sedan</h3>
+                    <i class=""></i>
+                </div>
+                <img src="./img/Carros/Maserati Quattroporte GTS.png" alt="Maserati Quattroporte GTS" />
+                <h2>Maserati Quattroporte GTS</h2>
+                <h4>Gasolina</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$4.500<span>/dia</span></p>
+                    <a href="Carro Luxo/Maserati Quattroporte GTS.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+
+
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>SUV</h3>
+                    <i class=""></i>
+                </div>
+                <img src="./img/Carros/Maserati Levante.png" alt="Maserati Levante" />
+                <h2>Maserati Levante</h2>
+                <h4>Gasolina</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$3.500<span>/dia</span></p>
+                    <a href="Carro Luxo/Maserati Levante GTS.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+
+
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Sedan</h3>
+                    <i class=""></i>
+                </div>
+                <img src="./img/Carros/Audi A3 2021.png" alt="Audi A3 2021" />
+                <h2>Audi A3</h2>
+                <h4>Gasolina</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$4.500<span>/dia</span></p>
+                    <a href="Carro Luxo/Audi A3 2021.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+
+
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Sedan</h3>
+                    <i class=""></i>
+                </div>
+                <img src="./img/Carros/Ferrari Portofino 2018.png" alt="Ferrari Portofino 2018" />
+                <h2>Ferrari Portofino</Portal>
+                </h2>
+                <h4>Gasolina</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$9.000<span>/dia</span></p>
+                    <a href="Carro Luxo/Ferrari Portofino 2018.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+
+
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Sedan</h3>
+                    <i class=""></i>
+                </div>
+                <img src="./img/Carros/Tesla Model S.png" alt="Tesla Model S" />
+                <h2>Tesla Model S</h2>
+                <h4>Elétrico</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$7.000<span>/dia</span></p>
+                    <a href="Carro Luxo/Tesla Model S.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+
+
+            <div class="rental-box">
+                <div class="rental-top">
+                    <h3>Sedan</h3>
+                    <i class=""></i>
+                </div>
+                <img src="./img/Carros/Mclaren GT 2020.png" alt="Mclaren GT 2020" />
+                <h2>Mclaren GT</h2>
+                <h4>Gasolina</h4>
+                <h4>Automático</h4>
+                <div class="price-btn">
+                    <p>R$12.000<span>/dia</span></p>
+                    <a href="Carro Luxo/Mclaren GT 2020.html" class="rental-btn">Alugar</a>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <div class="footer-content container">
+
+            <!-- Informações gerais -->
+            <div class="footer-box">
+                <a href="#" class="logo">EliteDrivers<span>.</span></a>
+                <p>Bairro da Glória, Cenad - Contagem</p>
+
+                <!-- Redes sociais -->
+                <div class="social">
+                    <a href="https://www.instagram.com/elitedrivers6/"><i class="bx bxl-instagram"></i></a>
+                    <a href="https://chat.whatsapp.com/EHIQeAsAeLH0rttJcGQLil"><i class="bx bxl-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Horário de funcionamento -->
+
+
+            <!-- Contato -->
+            <div class="footer-box">
+                <h3>Contato</h3>
+                <p>(31)99227-9677</p>
+                <p>kaikgeovane127@gmail.com <br />kaikgeovane127@gmail.com</p>
+                <p>Brasil</p>
+            </div>
+        </div>
+
+        <!-- Direitos autorais -->
+        <p class="copyright">&#169; 2026</p>
+    </div>
+
+    <!-- Biblioteca ScrollReveal para animações -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Arquivo JS principal -->
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,907 @@
+/* -------------------- FONTES -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Momo+Trust+Display&family=Squada+One&display=swap');
+
+/* Reset global + padrão de fonte */
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+    box-sizing: border-box;
+    font-family: var(--font-family-2);
+}
+
+/* -------------------- VARIÁVEIS GLOBAIS -------------------- */
+:root {
+    --main-color: #fa7104;
+    --second-color: #e05404;
+    --text-color: #060414;
+    --container-color: #efe8e0;
+    --bg-color: #f7f7f7;
+    --text-alter-color: #818181;
+    --poppins-font: "Poppins", sans-serif;
+    --font-family-2: "Squada One", sans-serif;
+}
+
+/* -------------------- ESTILO GLOBAL -------------------- */
+body {
+    color: var(--text-color);
+    background: (#f7f7f7);
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 3rem 0 2rem;
+}
+
+.container {
+    max-width: 1060px;
+    margin: auto;
+    width: 100%;
+}
+
+/* -------------------- HEADER E MENU -------------------- */
+header {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--text-color);
+    padding: 17px 20px;
+    border-radius: 0.8rem;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--bg-color);
+    text-transform: uppercase;
+    font-family: var(--font-family-2);
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+}
+
+.nav-link {
+    font-size: 0.88rem;
+    color: var(--text-alter-color);
+    font-family: var(--poppins-font);
+    transition: 0.4s;
+}
+
+.nav-link:hover {
+    color: var(--bg-color);
+}
+
+/* Ícones do topo */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-icons .bx {
+    color: var(--bg-color);
+    font-size: 20px;
+}
+
+.nav-icons .user-icon {
+    padding: 7px;
+    background: var(--main-color);
+    border-radius: 50%;
+}
+
+.nav-icons .user-icon:hover {
+    background: #534b4b;
+    transition: 0.3s;
+}
+
+/* -------------------- MENU MOBILE -------------------- */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    cursor: pointer;
+    z-index: 200;
+    transition: 0.3s;
+}
+
+.menu-icon div {
+    background: var(--bg-color);
+    height: 2px;
+    width: 23px;
+    transition: 0.3s;
+}
+
+/* Animação botão hambúrguer */
+.move .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.move .line2 {
+    opacity: 0;
+}
+
+.move .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/* -------------------- SEÇÃO HOME -------------------- */
+.home {
+    background-image: radial-gradient(rgb(199, 118, 38), #dd4201);
+    min-height: 670px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12rem !important;
+}
+
+.home-content {
+    z-index: 1;
+}
+
+/* Imagem principal */
+.home-img {
+    position: relative;
+}
+
+.home-img img {
+    width: 100%;
+}
+
+/* Texto gigante por trás do carro */
+.home-img::before {
+    content: 'EliteDriver';
+    width: 100%;
+    font-size: 11rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    position: absolute;
+    top: -80px;
+    text-align: center;
+    color: #080706;
+    z-index: -1;
+}
+
+/* -------------------- FORMULÁRIO DE BUSCA -------------------- */
+.input-form {
+    max-width: 550px;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-color);
+    padding: 12px;
+    border-radius: 0.5rem;
+}
+
+.input-box {
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box span {
+    font-weight: 500;
+}
+
+.input-box input {
+    outline: none;
+    border: none;
+    color: var(--text-alter-color);
+    background: transparent;
+    font-size: 0.94rem;
+    margin-top: 7px;
+}
+
+.input-border {
+    border-right: 1px solid var(--text-alter-color);
+    padding-right: 5px;
+}
+
+/* Botão da busca */
+.search-btn {
+    background: var(--text-alter-color);
+    color: var(--bg-color);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: rgb(78, 78, 78);
+    transition: 0.3s;
+}
+
+/* -------------------- SEÇÃO TRENDING -------------------- */
+.heading {
+    margin-bottom: 2rem;
+}
+
+.heading h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.trending-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 1.5rem;
+}
+
+/* Caixas dos carros populares */
+.trend-box {
+    background: var(--container-color);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.trend-box:hover {
+    background: #fff;
+    border: 2px solid var(--container-color);
+}
+
+.trend-box h4 {
+    font-family: var(--poppins-font);
+    background: #fff;
+    font-size: 0.8rem;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.launch-heading {
+    margin-bottom: 2rem;
+}
+
+.launch-heading h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.launches-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Caixas dos carros */
+.launch-box {
+      display: block;       /* o link ocupa toda a caixa */
+    text-decoration: none; /* remove sublinhado */
+    color: inherit;        /* herda a cor do texto da caixa */
+    background: var(--container-color);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.launch-box:hover {
+    background: #fff;
+    border: 2px solid var(--container-color);
+}
+
+.launch-box h4 {
+    font-family: var(--poppins-font);
+    background: #fff;
+    font-size: 0.8rem;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+
+
+/* -------------------- DROPDOWN DO MENU -------------------- */
+/* Container do botão dropdown */
+.nav-link.dropdown-btn {
+    position: relative; /* garante que o dropdown fique alinhado ao botão */
+    cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none;
+    position: relative;
+    top: 100%;      /* posiciona abaixo do botão */
+    right: 0;       /* alinha à direita do botão */
+    background: #0c0c1d;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    min-width: 160px;
+    z-index: 999;
+}
+
+/* Itens do dropdown */
+.dropdown-menu li a {
+    color: rgb(224, 224, 224);
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background: #ff6600;
+}
+
+
+/* -------------------- SEÇÃO DE LOCAÇÕES -------------------- */
+.rentals .heading {
+    text-align: center;
+}
+
+.heading p {
+    max-width: 550px;
+    width: 100%;
+    font-size: 0.9rem;
+    font-family: var(--poppins-font);
+    margin: 1rem auto;
+}
+
+.rentals-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 1.5rem;
+}
+
+.rental-box {
+    background: var(--container-color);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+.rental-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Topo da caixa de aluguel */
+.rental-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rental-top h3 {
+    display: inline-block;
+    font-family: var(--poppins-font);
+    background: #fff;
+    font-size: 0.77rem;
+    padding: 4px 7px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.rental-top .bx {
+    font-size: 20px;
+    color: var(--text-alter-color);
+    cursor: pointer;
+}
+
+.rental-top .bx:hover {
+    color: red;
+    transition: 0.3s ease;
+}
+
+/* Imagem e detalhes do carro */
+.rental-box img {
+    margin: 1.8rem 0 1rem;
+    height: 120px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.rental-box h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.rental-box h4 {
+    font-size: 0.94rem;
+    font-weight: 500;
+    color: var(--text-alter-color);
+    margin-top: 5px;
+}
+
+/* Preço e botão */
+.price-btn {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.price-btn p {
+    font-size: 0.97rem;
+}
+
+.price-btn p span {
+    color: var(--text-alter-color);
+}
+
+.rental-btn {
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 7px 10px;
+    font-size: 0.97rem;
+    border-radius: 4px;
+    transition: 0.4s ease;
+}
+
+.rental-btn:hover {
+    background: rgb(76, 196, 76);
+}
+
+/* -------------------- SEÇÃO EQUIPE -------------------- */
+.team .heading {
+    text-align: center;
+}
+
+.team-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 1.5rem;
+}
+
+.team-box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.team-box h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--main-color);
+    margin-top: 1rem;
+}
+
+.team-box span {
+    font-family: var(--poppins-font);
+    font-size: 0.77rem;
+    color: var(--text-alter-color);
+}
+
+.team-box p {
+    font-family: var(--poppins-font);
+    font-size: 0.88rem;
+    color: var(--text-alter-color);
+    margin-top: 8px;
+}
+
+/* -------------------- SEÇÃO DE AVALIAÇÕES -------------------- */
+.reviews .heading {
+    text-align: center;
+}
+
+.reviews-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.t-box {
+    background: var(--container-color);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.t-box .stars {
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.t-box p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Perfil do usuário em review */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-data h3 {
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 500;
+}
+
+.profile-data span {
+    font-size: 0.94rem;
+    font-weight: 400;
+    color: var(--text-alter-color);
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+    background: var(--text-color);
+    color: var(--bg-color);
+    
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.social a .bx {
+    font-size: 20px;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 0.8rem;
+}
+
+.social a .bx:hover {
+    color: var(--text-color);
+    background: var(--bg-color);
+    transition: background 0.4s ease-in-out;
+}
+
+.footer-box h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    gap: 10%;
+}
+
+.footer-box p {
+    margin-bottom: 8px;
+}
+
+.footer-box p span {
+    display:inline-block;
+    width: 35px;
+}
+
+.footer-box a {
+    color: var(--bg-color);
+    margin-bottom: 10px;
+}
+
+.copyright {
+    padding: 10px;
+    color: var(--bg-color);
+    text-align: center;
+}
+.plans {
+    padding: 50px 20px;
+    background: var(--bg-color);
+    text-align: center;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    display: none; /* inicialmente escondido */
+}
+
+.plan {
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 25px 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    text-decoration: none;
+    background: var(--main-color);
+    color: var(--bg-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--bg-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.new-releases {
+    padding: 50px 20px;
+    background: var(--bg-color);
+    text-align: center;
+    
+}
+
+.new-releases h2 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 40px;
+     font-family: 'Audiowide', cursive;
+}
+
+.releases-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.release-card {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    font-family: 'sans', cursive;
+    font-weight: 100;
+}
+
+.release-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.release-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+}
+
+.release-card p {
+    font-size: 0.9rem;
+    padding: 0 10px 10px;
+}
+
+.release-card:hover {
+    transform: scale(1.05);
+}
+
+
+/* -------------------- MEDIA QUERIES -------------------- */
+
+/* Desktop grande */
+@media (max-width: 1080px) {
+    .container {
+        width: 90%;
+    }
+     .launches-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Laptop médio */
+@media (max-width: 970px) {
+    section {
+        padding: 2rem 0;
+    }
+    .home-img::before {
+        font-size: 8rem;
+        top: -60px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 880px) {
+    .nav {
+        padding: 12px 20px;
+        border-radius: 0.6rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .home {
+        min-height: 500px;
+        padding-top: 9rem !important;
+    }
+    .home-img::before {
+        font-size: 6rem;
+        top: -38px;
+    }
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile grande */
+@media (max-width: 620px) {
+    header {
+        top: 15px;
+    }
+    .nav-icons .bx {
+        font-size: 17px;
+    }
+    .menu-icon {
+        display: flex;
+    }
+    .navbar {
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 59vw;
+        background: var(--text-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-radius: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+     .launches-content {
+        grid-template-columns: 1fr;
+    }
+    .open-menu {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .nav-link {
+        display: block;
+        margin: 1rem 0;
+    }
+    .home {
+        min-height: 440px;
+        padding-top: 8rem !important;
+    }
+    .home-img::before {
+        font-size: 5rem;
+        top: -34px;
+        letter-spacing: 1.2rem;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 477px) {
+    .home-img {
+        width: 95%;
+        margin: auto;
+    }
+    .home-img::before {
+        font-size: 4rem;
+        top: -32px;
+        letter-spacing: 1rem;
+    }
+    .input-form {
+        flex-direction: column;
+        align-items: normal;
+    }
+    .input-box {
+        flex: none;
+    }
+    .input-border {
+        border-right: none;
+        border-bottom: 1px solid var(--text-alter-color);
+        padding: 0 0 10px;
+    }
+    .heading h2 {
+        font-size: 2rem;
+    }
+    .reviews-content,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile extra pequeno */
+@media (max-width: 380px) {
+    .home-img::before {
+        font-size: 3.5rem;
+        top: -32px;
+        letter-spacing: 0.8rem;
+    }
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.garage {
+    padding: 60px 0;
+}
+
+.garage-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.garage-heading p {
+    color: #aaa;
+}
+
+.garage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.garage-card {
+    background: #0c0c1d;
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.garage-card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.garage-card h3 {
+    margin: 10px 0 5px;
+}
+
+.garage-card span {
+    color: #f5c542;
+    font-size: 14px;
+}
+
+.garage-empty {
+    text-align: center;
+    color: #777;
+    grid-column: 1 / -1;
+}

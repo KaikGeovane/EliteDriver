@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalhes do Aluguel - EliteDrivers</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --main: #fa7104;
+            --bg: #ff6600;
+            --text: #060414;
+            --muted: #000000;
+            --container: #e8e8e8;
+            --radius: 12px;
+            --max: 1080px;
+            --accent: #dd4201;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: "Poppins", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: var(--max);
+            background: #fff;
+            border-radius: var(--radius);
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+            padding: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .wrap {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .top-bar a {
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .vehicle-card {
+            background: var(--container);
+            padding: 16px;
+            border-radius: var(--radius);
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .car-3d-container {
+            flex: 1 1 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .car-3d-container iframe {
+            width: 100%;
+            max-width: 450px;
+            height: 300px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .vehicle-info {
+            flex: 1 1 300px;
+        }
+
+        .vehicle-info h1 {
+            margin: 0;
+            font-size: 1.6rem;
+        }
+
+        .vehicle-meta {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+
+        .specs {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .spec {
+            padding: 8px 12px;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 0.9rem;
+        }
+
+        .side {
+            padding: 20px;
+            background: #fff;
+            border-radius: var(--radius);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .side h3 {
+            margin: 0 0 12px 0;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .price small {
+            color: var(--muted);
+            font-weight: 400;
+            font-size: 0.85rem;
+        }
+
+        .form-row {
+            margin-top: 14px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 6px;
+            color: var(--muted);
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        .calc {
+            margin-top: 14px;
+            padding: 12px;
+            border-radius: var(--radius);
+            background: var(--container);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            margin-top: 12px;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-weight: 600;
+            background: var(--text);
+            color: #fff;
+        }
+
+        .btn.secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid #ccc;
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            display: none;
+            background: rgba(0, 0, 0, 0.45);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .modal {
+            background: #fff;
+            padding: 20px;
+            width: 90%;
+            max-width: 380px;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- Conteúdo principal -->
+        <div>
+            <div class="top-bar">
+                <a href="../Luxo.html">&lt; Voltar</a>
+                
+            </div>
+
+            <div class="vehicle-card">
+                <div class="car-3d-container">
+                    <iframe title="Audi A3 2021" frameborder="0" allowfullscreen mozallowfullscreen="true"
+                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                        src="https://sketchfab.com/models/db34a8426f684e299d53fcb2e331d35d/embed?autostart=1&transparent=1">
+                    </iframe>
+                </div>
+
+                <div class="vehicle-info">
+                    <h1 id="vehicleModel">Audi A3</h1>
+                    <div class="vehicle-meta" id="vehicleMeta">2021 · Gasolina · Automático</div>
+
+                    <div class="specs">
+                        <div class="spec">Potência: 190 cv</div>
+                        <div class="spec">Motor: 2.0 TFSI</div>
+                        <div class="spec">Portas: 4</div>
+                        <div class="spec">Cor: Azul Metálico</div>
+                    </div>
+
+                    <p style="color: var(--muted); margin-top: 12px;">
+                        Sedã premium moderno com ótimo desempenho, tecnologia avançada e conforto superior.
+                        Uma opção elegante para quem busca sofisticação e versatilidade.
+                    </p>
+
+                </div>
+            </div>
+
+            <section style="margin-top: 20px;">
+                <h3>Descrição</h3>
+
+                <!-- PRÉVIA (curta) -->
+                <p id="descPreview" style="color:var(--muted); line-height:1.6;">
+                    O Audi A3 2021 entrega o equilíbrio ideal entre esportividade, elegância e tecnologia,
+                    sendo um dos sedãs premium mais populares do mercado mundial.
+                </p>
+
+                <!-- TEXTO COMPLETO (invisível no início) -->
+                <p id="descFull" style="color:var(--muted); line-height:1.6; display:none;">
+
+                    <strong>Motorização e Desempenho</strong><br>
+                    O Audi A3 2021 vem equipado com o eficiente motor 2.0 TFSI, que oferece ótimo desempenho
+                    com economia de combustível.<br><br>
+
+                    <strong>Potência:</strong> 190 cv<br>
+                    <strong>Torque:</strong> 32,6 kgf.m<br>
+                    <strong>Transmissão:</strong> Automática S tronic de 7 marchas<br>
+                    <strong>Tração:</strong> Dianteira ou quattro (varia por versão)<br>
+                    <strong>0–100 km/h:</strong> ~7,2 s<br>
+                    <strong>Velocidade máxima:</strong> 241 km/h<br><br>
+
+                    <strong>Design e Construção</strong><br>
+                    O design traz linhas marcantes e iluminação full LED, além da grade Audi Singleframe,
+                    que reforça sua identidade premium. O interior conta com acabamento refinado,
+                    multimídia moderna e excelente ergonomia.<br><br>
+
+                    <strong>Dimensões e Capacidades</strong><br>
+                    • Comprimento: 4.50 m<br>
+                    • Porta-malas: 425 L<br>
+                    • Tanque: 50 L<br>
+                    • Lugares: 5<br><br>
+
+                    <strong>Tecnologia e Equipamentos</strong><br>
+                    O A3 oferece um pacote completo de tecnologia, incluindo:<br><br>
+
+                    • Painel digital Audi Virtual Cockpit
+                    • Multimídia de 10,1" com Apple CarPlay e Android Auto
+                    • Ar-condicionado digital dual zone
+                    • Faróis e lanternas em LED
+                    • Sensores dianteiros e traseiros
+                    • Carregamento por indução<br><br>
+
+                    <strong>Segurança</strong><br>
+                    O Audi A3 obteve notas máximas em testes de segurança, equipado com assistência moderna:<br><br>
+
+                    • Frenagem automática de emergência
+                    • Controle de cruzeiro adaptativo (ACC)
+                    • Assistente de faixa
+                    • 8 airbags
+                    • Controle de estabilidade e tração<br><br>
+
+                    <strong>Consumo</strong><br>
+                    • Cidade: ~10,5 km/l<br>
+                    • Estrada: ~13,5 km/l<br>
+                    • Combustível: Gasolina<br><br>
+
+                    <strong>Requisitos para locação</strong><br>
+                    • Idade mínima: 25 anos<br>
+                    • CNH válida há pelo menos 2 anos<br>
+                    • Caução obrigatória<br>
+                    • Seguro premium incluso<br>
+
+
+                </p>
+
+                <button id="toggleDesc" class="btn secondary" style="margin-top:10px;">Ver mais</button>
+            </section>
+
+
+        </div>
+
+        <!-- Lateral -->
+        <aside class="side">
+            <h3>Reserva rápida</h3>
+            <div class="price" id="priceDisplay">R$ 10.000 <small>/dia</small></div>
+            <form id="rentalForm">
+                <div class="form-row">
+                    <label for="startDate">Início</label>
+                    <input type="date" id="startDate" required />
+                </div>
+                <div class="form-row">
+                    <label for="endDate">Retorno</label>
+                    <input type="date" id="endDate" required />
+                </div>
+                <div class="form-row">
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" placeholder="Seu nome" required />
+                </div>
+                <div class="form-row">
+                    <label for="phone">Telefone</label>
+                    <input type="tel" id="phone" placeholder="(31) 9xxxx-xxxx" required />
+                </div>
+
+                <div class="calc">
+                    Dias: <strong id="daysCount">0</strong><br>
+                    Subtotal: <strong id="subtotal">R$ 0</strong><br>
+                    Seguro: <strong id="insurance">R$ 0</strong><br>
+                    <div style="margin-top: 8px; font-size: 1.1rem;">
+                        Total: <strong id="total">R$ 0</strong>
+                    </div>
+                </div>
+
+                <button type="button" class="btn" id="payBtn">Pagar agora</button>
+                <button type="button" class="btn secondary" id="reserveBtn">Reservar e pagar na loja</button>
+            </form>
+        </aside>
+    </div>
+
+    <div class="modal-backdrop" id="modalBackdrop">
+        <div class="modal">
+            <h4>Pagamento</h4>
+            <p id="modalMsg">Processando pagamento...</p>
+            <button class="btn" id="modalOk">OK</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    (function () {
+        const pricePerDay = 4500; // ajuste se quiser outro valor
+        const startEl = document.getElementById('startDate');
+        const endEl = document.getElementById('endDate');
+        const daysEl = document.getElementById('daysCount');
+        const subEl = document.getElementById('subtotal');
+        const insEl = document.getElementById('insurance');
+        const totEl = document.getElementById('total');
+        const priceDisplay = document.getElementById('priceDisplay');
+        const payBtn = document.getElementById('payBtn');
+        const reserveBtn = document.getElementById('reserveBtn');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const modalMsg = document.getElementById('modalMsg');
+        const modalOk = document.getElementById('modalOk');
+
+        // mostra preço inicial
+        if (priceDisplay) priceDisplay.innerHTML = `R$ ${pricePerDay.toLocaleString('pt-BR')} <small>/dia</small>`;
+
+        // converte string yyyy-mm-dd para Date (no timezone local) - usamos UTC para evitar problemas de horário
+        function toDateFromInput(s) {
+            if (!s) return null;
+            const parts = s.split('-').map(Number);
+            if (parts.length !== 3) return null;
+            // criar Date em UTC para evitar deslocamento por timezone
+            return new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
+        }
+
+        function daysBetween(a, b) {
+            if (!a || !b) return 0;
+            const msPerDay = 24 * 60 * 60 * 1000;
+            // diferencia em ms e arredonda para inteiro
+            return Math.max(0, Math.round((b - a) / msPerDay));
+        }
+
+        function formatBR(v) {
+            return 'R$ ' + v.toLocaleString('pt-BR');
+        }
+
+        function recalc() {
+            const s = toDateFromInput(startEl.value);
+            const e = toDateFromInput(endEl.value);
+            if (!s || !e || e <= s) {
+                daysEl.textContent = '0';
+                subEl.textContent = formatBR(0);
+                insEl.textContent = formatBR(0);
+                totEl.textContent = formatBR(0);
+                return;
+            }
+            const days = daysBetween(s, e);
+            const subtotal = days * pricePerDay;
+            const insurance = Math.round(subtotal * 0.05); // 5% de seguro
+            const total = subtotal + insurance;
+
+            daysEl.textContent = days;
+            subEl.textContent = formatBR(subtotal);
+            insEl.textContent = formatBR(insurance);
+            totEl.textContent = formatBR(total);
+        }
+
+        // setar datas padrão (hoje / amanhã) no input (formato yyyy-mm-dd)
+        function toInputFormat(d) {
+            const yyyy = d.getUTCFullYear();
+            const mm = String(d.getUTCMonth() + 1).padStart(2, '0');
+            const dd = String(d.getUTCDate()).padStart(2, '0');
+            return `${yyyy}-${mm}-${dd}`;
+        }
+        (function setDefaults() {
+            const today = new Date();
+            const utcToday = new Date(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()));
+            const utcTomorrow = new Date(utcToday.getTime() + 24 * 60 * 60 * 1000);
+            if (startEl && !startEl.value) startEl.value = toInputFormat(utcToday);
+            if (endEl && !endEl.value) endEl.value = toInputFormat(utcTomorrow);
+            // roda recalc inicial
+            recalc();
+        })();
+
+        // eventos
+        if (startEl) startEl.addEventListener('change', recalc);
+        if (endEl) endEl.addEventListener('change', recalc);
+
+        function showModal(msg) {
+            if (modalMsg) modalMsg.textContent = msg;
+            if (modalBackdrop) modalBackdrop.style.display = 'flex';
+        }
+        function hideModal() { if (modalBackdrop) modalBackdrop.style.display = 'none'; }
+
+        if (modalOk) modalOk.addEventListener('click', hideModal);
+
+        payBtn.addEventListener('click', function () {
+            const name = (document.getElementById('name') || {}).value || '';
+            const phone = (document.getElementById('phone') || {}).value || '';
+            const s = toDateFromInput(startEl.value);
+            const e = toDateFromInput(endEl.value);
+            if (!name.trim() || !phone.trim()) {
+                showModal('Preencha nome e telefone antes de pagar.');
+                return;
+            }
+            if (!s || !e || e <= s) {
+                showModal('Selecione datas válidas (retorno após início).');
+                return;
+            }
+            // aqui você pode integrar com gateway; por enquanto simulamos
+            showModal('Pagamento simulado com sucesso. Em breve entraremos em contato.');
+        });
+
+        reserveBtn.addEventListener('click', function () {
+            const name = (document.getElementById('name') || {}).value || '';
+            const phone = (document.getElementById('phone') || {}).value || '';
+            if (!name.trim() || !phone.trim()) {
+                showModal('Preencha nome e telefone antes de reservar.');
+                return;
+            }
+            showModal('Reserva registrada. Compareça à loja para finalizar o pagamento.');
+        });
+
+    })();
+
+
+    const btn = document.getElementById('toggleDesc');
+    const full = document.getElementById('descFull');
+
+    btn.addEventListener('click', () => {
+        if (full.style.display === 'none' || full.style.display === '') {
+            full.style.display = 'block';
+            btn.textContent = 'Ver menos';
+        } else {
+            full.style.display = 'none';
+            btn.textContent = 'Ver mais';
+        }
+    });
+
+
+</script>

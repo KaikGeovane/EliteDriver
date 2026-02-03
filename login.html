@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | EliteDrivers</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        body {
+            background: url("img/home.png") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .login-container {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 20px;
+            padding: 40px 50px;
+            width: 350px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .login-container h2 span {
+            color: #f5b754;
+        }
+
+        .input-box {
+            position: relative;
+            margin: 25px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px 40px 12px 15px;
+            border: none;
+            outline: none;
+            border-radius: 30px;
+            background: #222;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .input-box i {
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            color: #aaa;
+        }
+
+        .login-btn {
+            background: #d18101;
+            color: #000;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background: #fff;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 25px;
+            color: #ff8801;
+            text-decoration: none;
+        }
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Elite<span>Drivers</span></h2>
+<form id="loginForm">
+    <div class="input-box">
+        <input type="text" id="usuario" placeholder="Usuário" required>
+        <i class='bx bx-user'></i>
+    </div>
+
+    <div class="input-box">
+        <input type="password" placeholder="Senha" required>
+        <i class='bx bx-lock-alt'></i>
+    </div>
+
+    <button type="submit" class="login-btn">Entrar</button>
+</form>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const usuario = document.getElementById("usuario").value;
+
+    // salva o usuário
+    localStorage.setItem("usuarioLogado", usuario);
+
+    // vai pro index
+    window.location.href = "index.html";
+});
+</script>
+
+
+</body>
+</html>
