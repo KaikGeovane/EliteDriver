@@ -184,7 +184,11 @@ header {
 
 /* Texto gigante por trás do carro */
 .home-img::before {
+<<<<<<< HEAD
     content: 'EliteDriver';
+=======
+    content: 'EliteDrivers';
+>>>>>>> 38caee22135f9619a94087f14da2237cda464a09
     width: 100%;
     font-size: 11rem;
     font-weight: 500;
@@ -339,7 +343,11 @@ header {
 /* Dropdown */
 .dropdown-menu {
     display: none;
+<<<<<<< HEAD
     position: relative;
+=======
+    position: absolute;
+>>>>>>> 38caee22135f9619a94087f14da2237cda464a09
     top: 100%;      /* posiciona abaixo do botão */
     right: 0;       /* alinha à direita do botão */
     background: #0c0c1d;
@@ -352,7 +360,11 @@ header {
 
 /* Itens do dropdown */
 .dropdown-menu li a {
+<<<<<<< HEAD
     color: rgb(224, 224, 224);
+=======
+    color: white;
+>>>>>>> 38caee22135f9619a94087f14da2237cda464a09
     padding: 10px 15px;
     display: block;
     text-decoration: none;
@@ -569,9 +581,16 @@ header {
 }
 
 .footer-content {
+<<<<<<< HEAD
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+=======
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60%;
+    padding: 40px 0 30px;
+>>>>>>> 38caee22135f9619a94087f14da2237cda464a09
 }
 
 .footer-box {
@@ -854,6 +873,7 @@ header {
     }
 }
 
+<<<<<<< HEAD
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -905,3 +925,5 @@ html, body {
     color: #777;
     grid-column: 1 / -1;
 }
+=======
+>>>>>>> 38caee22135f9619a94087f14da2237cda464a09
